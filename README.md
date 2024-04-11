@@ -1,5 +1,31 @@
 # Theory of testing
 
+## Types of testing
+
+So called pyramide of testing. There are several of them. Lets describe the common and simple one:
+
+
+- **Unit tests**, low level   => 70-80%
+  Unit tests are very low level and close to the source of an application. They consist in testing individual methods and functions of the classes, 
+  components, or modules used by your software. 
+  Unit tests are generally quite cheap to automate and can run very quickly by a continuous integration server.
+
+- **Screenshot tests**,  low-middle level => 70-80%
+   The process of rendering a piece of UI (component or an entire screen), taking a screenshot of it, and comparing it to 
+   the reference screenshot that serves as the correct value
+
+- **Integration tests**, middle level  => 20-30%
+  Integration tests verify that different modules or services used by your application work well together. 
+  For example, it can be testing the interaction with the database or making sure that microservices work together as expected. 
+  These types of tests are more expensive to run as they require multiple parts of the application to be up and running.
+
+- **End-to-end tests(E2E)**, upper level  => 10%
+  End-to-end testing replicates a user behavior with the software in a complete application environment.
+  It verifies that various user flows work as expected and can be as simple as loading a web page or logging in or much more 
+  complex scenarios verifying email notifications, online payments, etc...
+
+
+
 ## Test Driven Development(TDD) 
 
 Test Driven Development (TDD) is a software development practice that focuses on creating unit test cases before developing the actual code.
@@ -48,27 +74,6 @@ Test scenarios are written collaboratively using a shared language, facilitating
 
 BDD covers different levels of testing, including unit, integration and acceptance testing. 
 It aims to verify the behavior and interaction of various components in the system.
-
-
-## Types of testing
-
-So called pyramide of testing. There are several of them. Lets describe the common and simple one:
-
-
-- **Unit tests**, low level
-  Unit tests are very low level and close to the source of an application. They consist in testing individual methods and functions of the classes, 
-  components, or modules used by your software. 
-  Unit tests are generally quite cheap to automate and can run very quickly by a continuous integration server.
-
-- **Integration tests**, middle level
-  Integration tests verify that different modules or services used by your application work well together. 
-  For example, it can be testing the interaction with the database or making sure that microservices work together as expected. 
-  These types of tests are more expensive to run as they require multiple parts of the application to be up and running.
-
-- **End-to-end tests(E2E)**, upper level
-  End-to-end testing replicates a user behavior with the software in a complete application environment.
-  It verifies that various user flows work as expected and can be as simple as loading a web page or logging in or much more 
-  complex scenarios verifying email notifications, online payments, etc...
 
 
 ## What is a stub (test state)
